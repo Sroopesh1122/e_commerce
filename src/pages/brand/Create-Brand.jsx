@@ -11,14 +11,14 @@ const list=[]
   return (
     <div className="p-2 w-full min-h-full bg-white flex justify-center items-start pt-10 md:pt-[10rem]">
       <Formik
-        initialValues={{ brand_name: "" }}
+        initialValues={{ brand_name: "" ,url:"" }}
         validationSchema={nameValidationSchema}
         onSubmit={(values) => alert(JSON.stringify(values))}
       >
-        {({ handleChange, isValid,values,touched,errors,handleBlur}) => (
+        {({ handleChange, isValid,values,touched,errors,handleBlur,setFieldValue,setFieldTouched,setFieldError}) => (
           <Form className="w-[280px] md:w-[500px]">
             <h1 className="text-xl md:text-2xl font-semibold uppercase">
-              Create Brand
+              Create (Brand )
             </h1>
             <div className="mt-5">
               <div className="mt-2">
@@ -34,7 +34,8 @@ const list=[]
                 <ErrorMessage name="brand_name" component="p" className='text-red-500 text-[0.8rem]' />
               </div>
               <div className="mt-3">
-                <ImgUploader uploadedList={list} multiple={true}/>
+                <ImgUploader uploadedList={list} multiple={true} />
+                <ErrorMessage name="brand_name" component="p" className='text-red-500 text-[0.8rem]' />
               </div>
             </div>
             <button type="submit" className="flex w-[80%] mx-auto rounded-lg justify-center items-center bg-black text-white mt-8 p-3 text-center">Create</button>

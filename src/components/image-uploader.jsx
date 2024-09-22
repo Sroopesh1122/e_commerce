@@ -16,6 +16,7 @@ const getBase64 = (file) =>
   });
 
 const ImgUploader = ({ uploadedList = [], multiple = false }) => {
+
   const [fileList, setFileList] = useState(uploadedList);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
