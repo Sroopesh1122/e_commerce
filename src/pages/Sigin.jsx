@@ -27,7 +27,7 @@ const Sigin = () => {
       >
         {({ handleChange, handleBlur, values ,touched,errors,isValid}) => (
           <Form className='min-w-[300px] md:w-[400px] shadow-lg rounded-md shadow-gray-300 p-5'>
-            <h1 className='head-1 text-center py-2'>SIGN IN ()</h1>
+            <h1 className='head-1 text-center py-2'>SIGN IN (User)</h1>
             <div className='mt-5 flex flex-col'>
               <div className='mt-2'>
                 <InputBox
